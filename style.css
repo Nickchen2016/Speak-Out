@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'futura_condensed';
+    src: url('/font/futura_medium_condensed_bt.ttf');
+}
+@font-face {
+    font-family: 'futura_italic';
+    src: url('/font/futura_medium_italic.ttf');
+}
+@font-face {
+    font-family: 'futura_bold';
+    src: url('/font/futura_bold.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#header {
+    display: flex;
+    width: 315px;
+    height: 88px;
+    background: #EF4036;
+    margin: -8px -8px 0px -8px;
+}
+
+#logo {
+    width: 70px;
+    height: 70px;
+    margin: 13px 10px 10px 16px;
+}
+
+#slogan {
+    width: 200px;
+    height: 70px;
+    font-family: 'futura_italic';
+    font-size: 22px;
+    line-height: 29px;
+    color: white;
+    margin: 13px 16px 10px 2px;
+}
+
+#slogan span {
+    background: #FFC414;
+    margin-left: 22px;
+    border-radius: 12px;
+    font-family:'futura-bold';
+    font-size:17px;
+    color:#EF4036;
+    padding: 0 9px 0 9px;
+}
+
+#control {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    align-content: center;
+    width: 315px;
+    height: 150px;
+    background: #EF4036;
+    margin: -8px -8px 0px -8px;
+    font-family: 'futura_condensed';
+    color:#BE1E2D ;
+}
+/*---------------------*/
+input[type=range] {
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 1.5px;
+  background: #8BC650;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: #8BC650 solid 1.4px;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background: none;
+  margin-top: -10px;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+/*---------------------*/
+#words {
+    display: flex;
+    height: 68px;
+    width: 315px;
+    align-content: center;
+    text-align: center;
+    font-family: 'futura_italic';
+    color: #262261;
+    font-size: 22px;
+    margin: 0px -8px 0px -8px;
+    /* background: grey; */
+}
+
+#app {
+    width:185px;
+    margin-top:28px;
+    /* background: red; */
+}
+
+.botton {
+    display: flex;
+}
+
+#icon {
+    display: flex;
+    width: 310px;
+    /* background:grey; */
+}
+
+#left, #right {
+    display: flex;
+    width: 65px;
+    height: 18px;
+    margin-top:33px;
+    /* background: green; */
+}
