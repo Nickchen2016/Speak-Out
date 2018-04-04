@@ -10,9 +10,10 @@ function scrolled(){
     return scrollTop;
 }
 
+
 window.addEventListener('mouseup', wordSelected);
 function wordSelected(){
-    let selectedText = window.getSelection().toString().toLowerCase();
+    var selectedText = window.getSelection().toString().toLowerCase();
     //Speech Synthesis setup here.
     if(selectedText.length>0){
 
@@ -25,7 +26,7 @@ function wordSelected(){
         synth.speak(utterThis);
         
         console.log(selectedText)
-        chrome.storage.sync.set({'word': selectedText},()=>{console.log('word sent from content')})
+        //chrome.storage.sync.set({'word': selectedText},()=>{console.log('word sent from content')});
         // let message = {
         //     text: selectedText
         // };
@@ -34,14 +35,17 @@ function wordSelected(){
      var location = window.getSelection().getRangeAt(0).getBoundingClientRect();
      //Tooltip check here
      if(selectedText.length>0 && !(/[^a-z-]/g.test(selectedText))){
+
+
         var side = document.createElement('div');
-        side.className = 'toolTip';
-
-        // let url = `https://api.shanbay.com/bdc/search/?word=${selectedText}`
-        // console.log(loadJSON(url));
-
-        var list = '<p>'+selectedText[0].toUpperCase()+selectedText.slice(1)+': '+'hello!!</P>';
-        side.innerHTML = list;
+        // side.className = 'toolTip';
+        $.getJSON(`https://api.shanbay.com/bdc/search/?word=${selectedText}`,function(data){
+            console.log(data);
+            var list = '<p>'+selectedText[0].toUpperCase()+selectedText.slice(1)+': '+data.data.definition+'</P>';
+            side.innerHTML = list;
+        });
+        // var list = '<p>'+selectedText[0].toUpperCase()+selectedText.slice(1)+': '+'</P>';
+        // side.innerHTML = list;
         document.body.prepend(side);
         side.style.height = '40px';
         side.style.zIndex = '1';
