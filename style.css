@@ -89,7 +89,8 @@ input[type=range]:focus {
 /*---------------------*/
 #words {
     display: flex;
-    height: 68px;
+    /*   68px  */
+    height:68px;
     width: 315px;
     align-content: center;
     text-align: center;
@@ -98,6 +99,12 @@ input[type=range]:focus {
     font-size: 22px;
     margin: 0px -8px 0px -8px;
     /* background: grey; */
+}
+
+#definition {
+    width: 315px;
+    min-height:0px;
+    max-height:130px;
 }
 
 #app {
@@ -112,6 +119,7 @@ input[type=range]:focus {
 
 #icon {
     display: flex;
+    margin-top: 45px;
     width: 310px;
     /* background:grey; */
 }
