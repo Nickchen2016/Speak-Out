@@ -128,6 +128,27 @@ input[type=range]:focus {
     display: flex;
     width: 65px;
     height: 18px;
-    margin-top:33px;
+    margin-top: 33px;
+    cursor: pointer;
     /* background: green; */
+}
+
+.biggerDot {
+    width:12px; 
+    height:12px; 
+    background: #262261;
+    border-radius: 50%;
+}
+
+.smallDot {
+    width:7px; 
+    height:7px; 
+    background: #262261;
+    border-radius: 50%;
+    margin-top:6px;
+}
+
+#left:hover .biggerDot, #right:hover .biggerDot {
+    border: 4px solid #262261;
+    background: white;
 }
