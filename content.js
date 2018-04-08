@@ -36,7 +36,7 @@ function wordSelected(){
 
 
         var side = document.createElement('div');
-        // side.className = 'toolTip';
+        side.className = 'toolTip';
         $.getJSON(`https://api.shanbay.com/bdc/search/?word=${selectedText}`,function(data){
             console.log(data);
 
@@ -78,9 +78,8 @@ function wordSelected(){
 }
 
 
-// document.getElementsByClassName('tooloTip').addEventListener('click',change);
-
-// function change(){
-//     var a = document.querySelector('.toolTip');
-//     a.parentNode.removeChild(a); 
-// }
+window.addEventListener('click',()=>{
+    Array.from(document.getElementsByClassName('toolTip')).forEach((el)=>{ 
+                el.innerHTML = '';        
+    })
+})

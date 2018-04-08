@@ -35,7 +35,7 @@ chrome.storage.sync.get('allWords',(data)=>{
       // console.log('element here', element.textContent);
      data.allWords.forEach((el)=>{
       if(element.textContent.toLowerCase()===el[0]){
-        document.getElementById('definition').innerHTML = '<div style="display:flex;"><div style="background:red;width:2%;height:36px;margin-top:35px;"></div><div style="width:95%;height:30px;font-family:futura_bold;font-size:33px;margin-top:36px;margin-left:20px;">'+el[0][0].toUpperCase()+el[0].slice(1)+' :</div></div><div style="width:85%;height:30px;margin-top:10px;margin-left:28px;margin-bottom:42px;">'+el[1]+'</div>';
+        document.getElementById('definition').innerHTML = '<div style="display:flex;"><div style="background:red;width:2%;height:36px;margin-top:35px;"></div><div style="width:95%;height:30px;font-family:futura_bold;font-size:33px;margin-top:36px;margin-left:20px;">'+el[0][0].toUpperCase()+el[0].slice(1)+' :</div></div><div style="width:85%;height:30px;margin-top:10px;margin-left:28px;margin-bottom:15%;">'+el[1]+'</div>';
         }
      })
     })
