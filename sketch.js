@@ -16,6 +16,7 @@ rate.onchange = function(){
   chrome.storage.sync.set({'value': rate.value}, ()=>console.log('Setting saved'));
 }
 
+//Dynamic innerHTML
 chrome.storage.sync.get('allWords',(data)=>{  
 
   console.log(data.allWords);
@@ -28,6 +29,7 @@ chrome.storage.sync.get('allWords',(data)=>{
 
 })
 
+//slideshow built here
   document.getElementById('left').addEventListener('click',()=>{
     if(distance>-800 && distance<=0){
       distance-=200;
@@ -36,7 +38,6 @@ chrome.storage.sync.get('allWords',(data)=>{
       distance=0;
       document.getElementById('app').style.transform = `translateX(${distance}px)`;
     }
-    console.log('-----------',distance);
   });
 
   document.getElementById('right').addEventListener('click',()=>{
@@ -47,6 +48,5 @@ chrome.storage.sync.get('allWords',(data)=>{
       distance-=800;
       document.getElementById('app').style.transform = `translateX(${distance}px)`;
     }
-    console.log(distance);
   });
 
