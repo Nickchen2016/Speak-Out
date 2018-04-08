@@ -110,7 +110,7 @@ input[type=range]:focus {
 #app {
     width:200px;
     margin-top:28px;
-    margin-left:20px;
+    margin-left: 18px;
     clear: both;
     float: left;
     white-space: nowrap;
