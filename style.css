@@ -108,9 +108,24 @@ input[type=range]:focus {
 }
 
 #app {
-    width:185px;
+    width:200px;
     margin-top:28px;
+    margin-left:20px;
+    clear: both;
+    float: left;
+    white-space: nowrap;
+    transform:translateX(0%);
+	transition:transform 500ms;
+
+    /* overflow-y: hidden; */
     /* background: red; */
+}
+
+.slide {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
 }
 
 .botton {
@@ -125,6 +140,7 @@ input[type=range]:focus {
 }
 
 #left, #right {
+    z-index: 1;
     display: flex;
     width: 65px;
     height: 18px;

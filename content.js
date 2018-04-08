@@ -47,7 +47,7 @@ function wordSelected(){
             side.innerHTML = list;
 
 //Save Searched words data into chrome storage for future usage 
-            if(allWords.length===20){
+            if(allWords.length===5){
                 allWords.shift();
                 allWords.push([`${selectedText}`,`${data.data.definition}`]);
                 chrome.storage.sync.set({'allWords' : allWords},()=>{console.log('shift the 1st, push in new word')});
