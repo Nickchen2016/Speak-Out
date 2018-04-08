@@ -8,7 +8,7 @@
 }
 @font-face {
     font-family: 'futura_bold';
-    src: url('/font/futura_bold.ttf');
+    src: url('/font/futura_bold.otf');
 }
 
 * {
@@ -104,28 +104,31 @@ input[type=range]:focus {
 #definition {
     width: 315px;
     min-height:0px;
-    max-height:130px;
+    max-height:160px;
+    color: #262261;
+    font-size: 15px;
+    border-bottom: 1px solid #E6E7E8;
 }
 
 #app {
     width:200px;
     margin-top:28px;
-    margin-left: 18px;
+    margin-left: -40px;
     clear: both;
     float: left;
     white-space: nowrap;
     transform:translateX(0%);
 	transition:transform 500ms;
-
-    /* overflow-y: hidden; */
-    /* background: red; */
 }
 
 .slide {
     display: inline-block;
     width: 100%;
     height: 100%;
+}
 
+.slide:hover {
+    color: #EF4036;
 }
 
 .botton {
@@ -167,4 +170,18 @@ input[type=range]:focus {
 #left:hover .biggerDot, #right:hover .biggerDot {
     border: 4px solid #262261;
     background: white;
+}
+
+#triangle {
+    width:0;
+    cursor: pointer;
+    margin-left:45%;
+    margin-top:-5%;
+    transform: translateY(0px);
+    transition:transform 500ms;
+}
+
+#triangle:hover {
+    transform: translateY(-3px);
+	transition:transform 500ms; 
 }
