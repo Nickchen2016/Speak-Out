@@ -171,7 +171,7 @@ input[type=range]:focus {
 #female {
 
     cursor:pointer;
-    transform:translateY(20%);
+    transform:translateY(25%);
     transition:transform 400ms;
 }
 
@@ -183,7 +183,7 @@ input[type=range]:focus {
 #male {
 
     cursor:pointer;
-    transform:translateY(20%);
+    transform:translateY(25%);
     transition:transform 400ms;
 }
 

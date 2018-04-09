@@ -51,13 +51,20 @@ function wordSelected(){
         var side = document.createElement('div');
         side.className = 'toolTip';
         $.getJSON(`https://api.shanbay.com/bdc/search/?word=${selectedText}`,function(data){
-            console.log(data);
+            // console.log(data.data.definition);
 
-            
-            var list = '<div style="display:flex;margin-top:22px;margin-bottom:8px;"><div style="width:5px;height:25px;background:red;"></div><div style="font-size:20px;margin-left:10px;">'+
-            selectedText[0].toUpperCase()+selectedText.slice(1)+':</div><div style="margin:6px 10px 18px 12px;">'+data.data.definition+'</div></div>'
+            if(data.data.definition!=undefined){
+                side.innerHTML = '<div style="display:flex;margin-top:20px;margin-bottom:4px;"><div style="width:6px;height:32px;background:red;"></div><div style="font-size:26px;margin:3px 20px 0 10px;">'+
+                selectedText[0].toUpperCase()+selectedText.slice(1)+':</div></div><div style="margin:0 18px 22px 18px;">'+data.data.definition+'</div>'
 
-            side.innerHTML = list;
+            }
+            else{
+                side.innerHTML = '<div style="display:flex;margin-top:20px;margin-bottom:4px;"><div style="width:6px;height:32px;background:red;"></div><div style="font-size:26px;margin:3px 20px 0 10px;">'+
+                selectedText[0].toUpperCase()+selectedText.slice(1)+':</div></div><div style="margin:0 18px 22px 18px;">该词义还未收入扇贝词典😳</div>'
+
+            }
+
+            // side.innerHTML = list;
 
 //Save Searched words data into chrome storage for future usage 
             if(allWords.length===20){
@@ -77,10 +84,10 @@ function wordSelected(){
         side.style.verticalAlign = 'middle';
         side.style.maxHeight = '100px';
         side.style.maxWidth = '400px';
-        side.style.zIndex = '10';
+        side.style.zIndex = '1';
         side.style.fontFamily = 'futura_bold, sans-serif';
         side.style.position = 'absolute';
-        side.style.fontSize = '12px';
+        side.style.fontSize = '13px';
         side.style.color = '#262261';
         side.style.boxShadow = '1px 1px 12px 2px rgba(0,0,0,.2)';
         side.style.background = 'white';
