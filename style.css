@@ -60,28 +60,38 @@
     margin: -8px -8px 0px -8px;
     font-family: 'futura_condensed';
     font-size:15px;
-    color:#BE1E2D;
 }
 
 #sp1 {
     margin:12px 35px 6px 37px; 
+    color:#BE1E2D;
 }
 #sp2 {
     margin:12px 35px 6px 36px; 
+    color:#BE1E2D;
 }
 #sp3 {
-    margin:12px 37px 6px 35px; 
+    margin:12px 37px 6px 35px;
+    color:#BE1E2D; 
+}
+#sp1.active, #sp2.active, #sp3.active {
+    color:white;
 }
 
 #off {
     /* float:left;clear:both; */
     width:30px;
     margin: 10px 0 0 38px;
+    color:#BE1E2D;
 }
 #on {
     /* float:left;clear:both; */
     width:30px;
     margin: 10px 42px 0 76px;
+    color:#BE1E2D;
+}
+#off.active, #on.active {
+    color:white;
 }
 
 /*---------------------*/
@@ -131,6 +141,7 @@ input[type=range]:focus {
     font-size: 15px;
     border-bottom: 1px solid #E6E7E8;
 }
+
 
 #app {
     width:200px;

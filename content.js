@@ -2,6 +2,7 @@
 console.log('extension go here?!')
 
 var allWords = [];
+var voices = [];
 var synth = window.speechSynthesis;
 
 //Caculate the scrolling distance.
@@ -15,15 +16,27 @@ function scrolled(){
 window.addEventListener('mouseup', wordSelected);
 function wordSelected(){
     var selectedText = window.getSelection().toString().toLowerCase();
+    voices = synth.getVoices();
 //Speech Synthesis setup here.
     if(selectedText.length>0){
 
         var utterThis = new SpeechSynthesisUtterance(selectedText);
+        chrome.storage.sync.get('gender',(data)=>{
+            if(data.gender==='0'){
+                utterThis.voice = voices[0];
+            }else{
+                utterThis.voice = voices[48];
+            }
+        })
 
-        chrome.storage.sync.get('value',(data)=>{
-    
-            utterThis.rate = data.value;
-            synth.speak(utterThis);
+        chrome.storage.sync.get('onOff',(data)=>{
+            if(data.onOff==='1'){
+                chrome.storage.sync.get('value',(data)=>{
+        
+                    utterThis.rate = data.value;
+                    synth.speak(utterThis);
+                })
+            }
         })
         
         console.log(selectedText)
