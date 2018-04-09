@@ -84,7 +84,7 @@ function wordSelected(){
         side.style.verticalAlign = 'middle';
         side.style.maxHeight = '100px';
         side.style.maxWidth = '400px';
-        side.style.zIndex = '1';
+        side.style.zIndex = '200';
         side.style.fontFamily = 'futura_bold, sans-serif';
         side.style.position = 'absolute';
         side.style.fontSize = '13px';
