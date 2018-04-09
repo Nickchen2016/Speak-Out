@@ -17,30 +17,31 @@
     </div>
     <div id='control'>
       <div>
-        <div id='info'>
-          <label for='rate'>RATE</label>
-          <div id='rateNum' class='rate-value'>1</div>
-        </div>
-        <input autocomplete="off" type='range' autocomplete="off" min='0.5' max='2' value='1' step='0.1' id='rate' style='width:250px'/>
+          <div style="display:flex;line-height:14px;">
+            <div id="sp1">SLOTH<br>SPEED</div>
+            <div id="sp2">HUMAN<br>SPEED</div>
+            <div id="sp3">LIGHT<br>SPEED</div>
+          </div>
+        <input autocomplete="off" type='range' min='0.4' max='1.6' value='1' step='0.2' id='rate' style='width:240px'/>
       </div>
       <div>
-          <!-- <div id='info'>
-              <label for='rate'>RATE</label>
-              <div id='rateNum' class='rate-value'>1</div>
-            </div>
-            <input autocomplete="off" type='range' autocomplete="off" min='0.5' max='2' value='1' step='0.1' id='rate' style='width:60px'/> -->
+          <div style="margin-top:12px;display:flex;">
+            <div id="off">OFF</div>
+            <div id="on">ON</div>
+          </div>
+          <input autocomplete="off" type='range' min='0' max='1' value='1' step='1' id='switch' style='width:60px;float:left;clear:both;margin-top:-3.5%;margin-left:24%;'/>
       </div>
       <div id='icon'>
-          <div class='botton' style="margin-top:22px;margin-left:15px;">
+          <div class='botton' style="margin-top:21px;margin-left:15px;">
             <img src='/image/language.png'>
           </div>
-          <div class='botton' style="margin-left:70px;margin-top:-11px;">
-            <div class='female'><img src='/image/female.png'></div>
-            <div class='male' style="margin-left:8px;"><img src='/image/male.png'></div>
+          <div class='botton' style="height:65px;margin-left:70px;margin-top:-11px;overflow:hidden;">
+            <div id='female' value="Victoria(en-US)"><img src='/image/female.png'></div>
+            <div id='male' style="margin-left:8px;"><img src='/image/male.png'></div>
           </div>
       </div>
     </div>
-    <div style="vertical-align:middle;min-height:68px;max-height:200px;margin: 0px -8px 0px -8px;">
+    <div style="vertical-align:middle;margin: 0px -8px 0px -8px;">
       <div id="definition"></div>
       <div id="triangle">
         <img src='/image/up.png'>

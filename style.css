@@ -55,22 +55,45 @@
     text-align: center;
     align-content: center;
     width: 315px;
-    height: 150px;
+    height: 160px;
     background: #EF4036;
     margin: -8px -8px 0px -8px;
     font-family: 'futura_condensed';
-    color:#BE1E2D ;
+    font-size:15px;
+    color:#BE1E2D;
 }
+
+#sp1 {
+    margin:12px 35px 6px 37px; 
+}
+#sp2 {
+    margin:12px 35px 6px 36px; 
+}
+#sp3 {
+    margin:12px 37px 6px 35px; 
+}
+
+#off {
+    /* float:left;clear:both; */
+    width:30px;
+    margin: 10px 0 0 38px;
+}
+#on {
+    /* float:left;clear:both; */
+    width:30px;
+    margin: 10px 42px 0 76px;
+}
+
 /*---------------------*/
 input[type=range] {
     -webkit-appearance: none;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-  height: 1.5px;
+  height: 1px;
   background: #8BC650;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -81,6 +104,7 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 50%;
   background: none;
   margin-top: -10px;
+  cursor:pointer;
 }
 
 input[type=range]:focus {
@@ -89,8 +113,7 @@ input[type=range]:focus {
 /*---------------------*/
 #words {
     display: flex;
-    /*   68px  */
-    height:68px;
+    height:66px;
     width: 315px;
     align-content: center;
     text-align: center;
@@ -98,7 +121,6 @@ input[type=range]:focus {
     color: #262261;
     font-size: 22px;
     margin: 0px -8px 0px -8px;
-    /* background: grey; */
 }
 
 #definition {
@@ -135,10 +157,34 @@ input[type=range]:focus {
     display: flex;
 }
 
+#female {
+
+    cursor:pointer;
+    transform:translateY(20%);
+    transition:transform 400ms;
+}
+
+#female.active {
+    transform:translateY(0%);
+    transition:transform 400ms;
+}
+
+#male {
+
+    cursor:pointer;
+    transform:translateY(20%);
+    transition:transform 400ms;
+}
+
+#male.active {
+    transform:translateY(0%);
+    transition:transform 400ms;
+}
+
 #icon {
     display: flex;
-    margin-top: 45px;
-    width: 310px;
+    margin-top: 2px;
+    width: 315px;
     /* background:grey; */
 }
 
