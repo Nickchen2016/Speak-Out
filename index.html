@@ -9,6 +9,7 @@
     <script defer src="/bundle.js"></script>
   </head>
   <body>
+    <div id="offpage"></div>
     <div id='header'>
       <div id='logo'>
         <img src='/image/logo.png'>
@@ -24,18 +25,18 @@
           </div>
         <input autocomplete="off" type='range' min='0.4' max='1.6' value='1' step='0.2' id='rate' style='width:240px'/>
       </div>
-      <div>
+      <div id='begin'>
           <div style="margin-top:15px;display:flex;">
             <div id="off">OFF</div>
             <div id="on">ON</div>
           </div>
-          <input autocomplete="off" type='range' min='0' max='1' value='1' step='1' id='onOff' style='width:60px;float:left;clear:both;margin-top:-3.5%;margin-left:24%;'/>
+          <input autocomplete="off" type='range' min='0' max='1' value='1' step='1' id='onOff' style='width:60px;float:left;clear:both;margin-top:-4.5%;margin-left:35%;'/>
       </div>
       <div id='icon'>
-          <div class='botton' style="margin-top:16px;margin-left:15px;">
+          <div class='botton' style="position:absolute;z-index:1;margin-top:16px;margin-left:15px;">
             <img src='/image/language.png'>
           </div>
-          <div class='botton' style="height:75px;margin-left:70px;margin-top:-24px;overflow:hidden;">
+          <div class='botton' style="height:75px;margin-left:60%;margin-top:-24px;overflow:hidden;">
             <div id='female' value="48"><img src='/image/female.png'></div>
             <div id='male' value="0" style="margin-left:8px;"><img src='/image/male.png'></div>
           </div>
@@ -47,14 +48,14 @@
         <img src='/image/up.png'>
       </div>
     <div id='words'>
-      <div id="left">
-        <span class ='biggerDot' style="margin-top:3px;margin-left:30px;"></span>
+      <div id="left" style="margin-left:8px;">
+        <span class ='biggerDot' style="margin-left:22px;"></span>
         <span class ='smallDot' style="margin-left:4px;"></span>
       </div>
       <div id="app"></div>
-      <div id="right" style="margin-left:60px;">
-        <span class ='smallDot' style="margin-left:5px;"></span>
-        <span class ='biggerDot' style="margin-top:3px;margin-left:4px;"></span>
+      <div id="right" style="margin-left:63%;margin-right:-8px;">
+        <span class ='smallDot' style="margin-left:13px;"></span>
+        <span class ='biggerDot' style="margin-left:4px;"></span>
       </div>
     </div>
     </div>

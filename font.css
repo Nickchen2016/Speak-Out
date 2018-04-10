@@ -5,3 +5,5 @@
 .wordTitle {
     font-family:'futura_bold';
 }
+
+::selection { background:#FFDD17; }

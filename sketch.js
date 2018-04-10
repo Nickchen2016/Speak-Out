@@ -106,11 +106,11 @@ chrome.storage.sync.get('allWords',(data)=>{
 
   data.allWords.reverse().forEach((el)=>{
 //Dynamic innerHTML for #app
-      document.getElementById('app').innerHTML += '<div class="slide" style="cursor:pointer;width:315px;height:100%;">'+el[0][0].toUpperCase()+el[0].slice(1)+'</div>';
+      document.getElementById('app').innerHTML += '<div class="slide" style="cursor:pointer;width:315px;height:100%;margin-top:0px;"><p style="margin-top:18px;">'+el[0][0].toUpperCase()+el[0].slice(1)+'</p></div>';
 
   });
 
-  //Dynamic click event for #definition
+  //Dynamic loading event for #definition
 
   var className = document.getElementsByClassName('slide');
   // console.log('----------', className[0].innerHTML);
@@ -119,11 +119,11 @@ chrome.storage.sync.get('allWords',(data)=>{
       // console.log('element here', element.textContent);
      data.allWords.forEach((el)=>{
       if(element.textContent.toLowerCase()===el[0] && el[1]!='undefined'){
-        document.getElementById('definition').innerHTML = '<div style="display:flex;"><div style="background:red;width:2%;height:36px;margin-top:35px;"></div><div style="width:95%;height:30px;font-family:futura_bold;font-size:33px;margin-top:36px;margin-left:20px;">'+el[0][0].toUpperCase()+el[0].slice(1)+':</div></div><div style="width:85%;height:30px;margin-top:10px;margin-left:28px;margin-bottom:15%;">'+el[1]+'</div>';
+        document.getElementById('definition').innerHTML = '<div style="display:flex;"><div style="background:red;width:2.5%;height:36px;margin-top:35px;"></div><div style="width:95%;height:30px;font-family:futura_bold;font-size:33px;margin-top:36px;margin-left:20px;">'+el[0][0].toUpperCase()+el[0].slice(1)+':</div></div><div style="width:85%;height:30px;margin-top:10px;margin-left:28px;margin-bottom:15%;">'+el[1]+'</div>';
         document.getElementById('wordsdefine').classList.add('active');
       }
       if(element.textContent.toLowerCase()===el[0] && el[1]==='undefined'){
-        document.getElementById('definition').innerHTML = '<div style="display:flex;"><div style="background:red;width:2%;height:36px;margin-top:35px;"></div><div style="width:95%;height:30px;font-family:futura_bold;font-size:33px;margin-top:36px;margin-left:20px;">'+el[0][0].toUpperCase()+el[0].slice(1)+':</div></div><div style="width:85%;height:30px;margin-top:10px;margin-left:28px;margin-bottom:15%;">该词义还未收入扇贝词典😳</div>';
+        document.getElementById('definition').innerHTML = '<div style="display:flex;"><div style="background:red;width:2.5%;height:36px;margin-top:35px;"></div><div style="width:95%;height:30px;font-family:futura_bold;font-size:33px;margin-top:36px;margin-left:20px;">'+el[0][0].toUpperCase()+el[0].slice(1)+':</div></div><div style="width:85%;height:30px;margin-top:10px;margin-left:28px;margin-bottom:15%;">该词义还未收入扇贝词典😳</div>';
         document.getElementById('wordsdefine').classList.add('active');
 
       }
@@ -134,16 +134,16 @@ chrome.storage.sync.get('allWords',(data)=>{
 //slideshow built here
   var n = data.allWords.length-1;
   document.getElementById('right').addEventListener('click',()=>{
-    if(distance>-(n*315) && distance<=0){
-      distance-=315;
-      document.getElementById('app').style.transform = `translateX(${distance}px)`;
+    if(distance>-(n*100) && distance<=0){
+      distance-=100;
+      document.getElementById('app').style.transform = `translateX(${distance}%)`;
     }
   });
 
   document.getElementById('left').addEventListener('click',()=>{
-    if(distance>=-(n*315) && distance<0){
-      distance+=315;
-      document.getElementById('app').style.transform = `translateX(${distance}px)`;
+    if(distance>=-(n*100) && distance<0){
+      distance+=100;
+      document.getElementById('app').style.transform = `translateX(${distance}%)`;
     }
   });
 

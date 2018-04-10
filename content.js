@@ -64,8 +64,6 @@ function wordSelected(){
 
             }
 
-            // side.innerHTML = list;
-
 //Save Searched words data into chrome storage for future usage 
             chrome.storage.sync.get(('allWords'),(da)=>{
                 if(da.allWords.length===20){
@@ -86,7 +84,7 @@ function wordSelected(){
         side.style.verticalAlign = 'middle';
         side.style.maxHeight = '160px';
         side.style.maxWidth = '400px';
-        side.style.zIndex = '200';
+        side.style.zIndex = '900';
         side.style.fontFamily = 'sans-serif';
         side.style.position = 'absolute';
         side.style.fontSize = '13px';

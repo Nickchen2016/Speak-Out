@@ -15,9 +15,26 @@
     box-sizing: border-box;
 }
 
+body {
+    margin-bottom: -8px;
+}
+
+/* #offpage {
+    position: absolute;
+    z-index:2;
+    height:100%;
+    width:100%;
+    background: #000033;
+    margin-left:-8px;
+} */
+
+#begin {
+    position: absolute;
+    z-index:2;
+}
+
 #header {
     position: relative;
-    z-index: 1;
     display: flex;
     width: 315px;
     height: 88px;
@@ -53,7 +70,6 @@
 
 #control {
     position: relative;
-    z-index: 1;
     text-align: center;
     align-content: center;
     width: 315px;
@@ -130,16 +146,16 @@ input[type=range]:focus {
     font-family: 'futura_italic';
     color: #262261;
     font-size: 22px;
-    margin: 0px -8px 0px -8px;
+    margin: 0px -8px -8px -8px;
 }
 
 #wordsdefine {
     width: 315px;
-    height: 250px;
+    height: 270px;
     vertical-align:middle;
-    margin: 0px -8px 0px -8px;
+    margin: -8px -8px -8px -8px;
     margin-top: -180px;
-	transition: all 500ms;
+    transition: all 500ms;
 }
 
 #wordsdefine.active {
@@ -156,15 +172,17 @@ input[type=range]:focus {
 }
 
 #app {
-    width:200px;
-    height:30px;
-    margin-top:28px;
-    margin-left: -40px;
+    position: absolute;
+    width:100%;
+    height:55px;
+    margin-top:18px;
+    margin-left: 2%;
     clear: both;
     float: left;
     white-space: nowrap;
+    text-align:center;
     transform:translateX(0%);
-	transition:transform 500ms;
+    transition: all 500ms;
 }
 
 .slide {
@@ -182,7 +200,6 @@ input[type=range]:focus {
 }
 
 #female {
-
     cursor:pointer;
     transform:translateY(25%);
     transition:transform 400ms;
@@ -207,19 +224,18 @@ input[type=range]:focus {
 
 #icon {
     display: flex;
-    margin-top: 2px;
+    margin-top: 45px;
     width: 315px;
-    /* background:grey; */
 }
 
 #left, #right {
+    position: relative;
     z-index: 1;
     display: flex;
-    width: 65px;
-    height: 18px;
-    margin-top: 33px;
+    width: 66px;
+    height: 60px;
+    margin-top: 18px;
     cursor: pointer;
-    /* background: green; */
 }
 
 .biggerDot {
@@ -227,6 +243,7 @@ input[type=range]:focus {
     height:12px; 
     background: #262261;
     border-radius: 50%;
+    margin-top:27px;
 }
 
 .smallDot {
@@ -234,7 +251,7 @@ input[type=range]:focus {
     height:7px; 
     background: #262261;
     border-radius: 50%;
-    margin-top:6px;
+    margin-top:30px;
 }
 
 #left:hover .biggerDot, #right:hover .biggerDot {
@@ -243,7 +260,6 @@ input[type=range]:focus {
 }
 
 #triangle {
-    width:0;
     cursor: pointer;
     margin-left:45%;
     margin-top:-5%;
