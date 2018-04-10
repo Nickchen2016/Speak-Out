@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'futura_bold';
+    src: url('chrome-extension://__MSG_@@extension_id__/font/futura_bold.otf');
+}
+.wordTitle {
+    font-family:'futura_bold';
+}
