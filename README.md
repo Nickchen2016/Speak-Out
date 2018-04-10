@@ -6,7 +6,7 @@
 
 - Did you ever feel that you can absorb more information by listening someone's speaking than read by yourself?
 
-- Did you ever struggle to copy some unknown words on the browser and paste in another tab to figure out its meaning?
+- Did you ever struggle to copy some unknown words on the browser & paste in another tab to figure out its meaning?
 
 ## Description
 
@@ -17,7 +17,7 @@ Speak-Out is a small tool that fixs those questions above & helps you to have a 
 
 Since it is a Chrome Extension. I need you to have a Google Chrome 1st.
 
-No npm install require, if you want to check the code. Just download it and go to your Chrome Broswer.
+No npm install require, if you want to check the code. Just download it & go to your Chrome Broswer.
 
 In Chrome Broswer--Window--Extensions--Load Unpacked--locate the download file--Select--Enjoy!🍻
 
