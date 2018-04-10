@@ -30,7 +30,7 @@ In Chrome Broswer--Window--Extensions--Load Unpacked--locate the download file--
 
 - Google Chrome Storage https://developer.chrome.com/apps/storage
 
--HTML CSS JS JQuery
+- HTML CSS JS JQuery
 
 
 
