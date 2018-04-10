@@ -10,5 +10,31 @@ Did you ever struggle to copy some unknown words on the browser and paste in ano
 
 ## Description
 
-Speak-Out is a small tool that fixs 😏 those questions above & helps you to have a smoother 🏄‍♀️🏄🏼 experience.
+Speak-Out is a small tool that fixs those questions above & helps you to have a smoother 🏄‍♀️🏄🏼 experience.
+
+---
+
+## How To Use?
+
+Since it is a Chrome Extension. I need you to have a Google Chrome 1st.
+
+No npm install require, if you want to check the code. Just download it and go to your Chrome Broswer.
+
+In Chrome Broswer--Window--Extensions--Load Unpacked--locate the download file--Select--Enjoy!🍻
+
+---
+
+## Used Tech
+
+Speech Synthesis https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis
+
+ShanBay API https://www.shanbay.com/help/developer/api_v1/
+
+Google Chrome Storage
+
+HTML CSS JS JQuery
+
+
+
+
 
