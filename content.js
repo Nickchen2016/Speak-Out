@@ -5,13 +5,6 @@ var allWords = [];
 var voices = [];
 var synth = window.speechSynthesis;
 
-// $("head").prepend("<style type=\"text/css\">" + 
-//                                 "@font-face {\n" +
-//                                     "\tfont-family: \"futura_bold\";\n" + 
-//                                     "\tsrc: url('/font/futura_bold.otf');\n" + 
-//                                 "}\n" +  
-//                             "</style>");
-
 //Caculate the scrolling distance.
 function scrolled(){
     var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : document.body.scrollTop;
@@ -74,14 +67,16 @@ function wordSelected(){
             // side.innerHTML = list;
 
 //Save Searched words data into chrome storage for future usage 
-            if(allWords.length===20){
-                allWords.shift();
-                allWords.push([`${selectedText}`,`${data.data.definition}`]);
-                chrome.storage.sync.set({'allWords' : allWords},()=>{console.log('shift the 1st, push in new word')});
-            }else{
-                allWords.push([`${selectedText}`,`${data.data.definition}`]);
-                chrome.storage.sync.set({'allWords' : allWords},()=>{console.log('definition has been saved')});
-            }    
+            chrome.storage.sync.get(('allWords'),(da)=>{
+                if(da.allWords.length===20){
+                    da.allWords.shift();
+                    da.allWords.push([`${selectedText}`,`${data.data.definition}`]);
+                    chrome.storage.sync.set({'allWords' : da.allWords},()=>{console.log('shift the 1st, push in new word')});
+                }else{
+                    da.allWords.push([`${selectedText}`,`${data.data.definition}`]);
+                    chrome.storage.sync.set({'allWords' : da.allWords},()=>{console.log('definition has been saved')});
+                }
+            })    
         });
 
 
