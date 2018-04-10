@@ -111,6 +111,7 @@ chrome.storage.sync.get('allWords',(data)=>{
   });
 
   //Dynamic click event for #definition
+
   var className = document.getElementsByClassName('slide');
   // console.log('----------', className[0].innerHTML);
   Array.from(className).forEach((element)=>{
@@ -119,9 +120,12 @@ chrome.storage.sync.get('allWords',(data)=>{
      data.allWords.forEach((el)=>{
       if(element.textContent.toLowerCase()===el[0] && el[1]!='undefined'){
         document.getElementById('definition').innerHTML = '<div style="display:flex;"><div style="background:red;width:2%;height:36px;margin-top:35px;"></div><div style="width:95%;height:30px;font-family:futura_bold;font-size:33px;margin-top:36px;margin-left:20px;">'+el[0][0].toUpperCase()+el[0].slice(1)+':</div></div><div style="width:85%;height:30px;margin-top:10px;margin-left:28px;margin-bottom:15%;">'+el[1]+'</div>';
-        }
+        document.getElementById('wordsdefine').classList.add('active');
+      }
       if(element.textContent.toLowerCase()===el[0] && el[1]==='undefined'){
         document.getElementById('definition').innerHTML = '<div style="display:flex;"><div style="background:red;width:2%;height:36px;margin-top:35px;"></div><div style="width:95%;height:30px;font-family:futura_bold;font-size:33px;margin-top:36px;margin-left:20px;">'+el[0][0].toUpperCase()+el[0].slice(1)+':</div></div><div style="width:85%;height:30px;margin-top:10px;margin-left:28px;margin-bottom:15%;">该词义还未收入扇贝词典😳</div>';
+        document.getElementById('wordsdefine').classList.add('active');
+
       }
      })
     })
@@ -147,7 +151,6 @@ chrome.storage.sync.get('allWords',(data)=>{
 })
 
 document.getElementById('triangle').addEventListener('click', ()=>{
-  document.getElementById('definition').innerHTML = '';
+  // document.getElementById('definition').innerHTML = '';
+  document.getElementById('wordsdefine').classList.remove('active');
 })
-
-

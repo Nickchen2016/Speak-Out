@@ -16,6 +16,8 @@
 }
 
 #header {
+    position: relative;
+    z-index: 1;
     display: flex;
     width: 315px;
     height: 88px;
@@ -79,13 +81,11 @@
 }
 
 #off {
-    /* float:left;clear:both; */
     width:30px;
     margin: 10px 0 0 38px;
     color:#BE1E2D;
 }
 #on {
-    /* float:left;clear:both; */
     width:30px;
     margin: 10px 42px 0 76px;
     color:#BE1E2D;
@@ -133,18 +133,31 @@ input[type=range]:focus {
     margin: 0px -8px 0px -8px;
 }
 
+#wordsdefine {
+    width: 315px;
+    height: 250px;
+    vertical-align:middle;
+    margin: 0px -8px 0px -8px;
+    margin-top: -180px;
+	transition: all 500ms;
+}
+
+#wordsdefine.active {
+    margin-top: 0;
+	transition: all 500ms;
+}
+
 #definition {
     width: 315px;
-    min-height:0px;
-    max-height:200px;
+    height:180px;
     color: #262261;
     font-size: 15px;
     border-bottom: 1px solid #E6E7E8;
 }
 
-
 #app {
     width:200px;
+    height:30px;
     margin-top:28px;
     margin-left: -40px;
     clear: both;
@@ -241,7 +254,7 @@ input[type=range]:focus {
 }
 
 @keyframes MoveUpDown {
-    0&, 100% {
+    0%, 100% {
         transform: translateY(0px);
     }
     50% {
