@@ -10,5 +10,5 @@ Did you ever struggle to copy some unknown words on the browser and paste in ano
 
 ## Description
 
-Speak-Out is a small tool that fixs those questions above & helps you to have a smoother 🏄‍♀️ experience.😏
+Speak-Out is a small tool that fixs 😏 those questions above & helps you to have a smoother 🏄‍♀️🏄🏼 experience.
 
