@@ -12,7 +12,6 @@ Did you ever struggle to copy some unknown words on the browser and paste in ano
 
 Speak-Out is a small tool that fixs those questions above & helps you to have a smoother 🏄‍♀️🏄🏼 experience.
 
----
 
 ## How To Use?
 
@@ -30,7 +29,7 @@ Speech Synthesis https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesi
 
 ShanBay API https://www.shanbay.com/help/developer/api_v1/
 
-Google Chrome Storage
+Google Chrome Storage https://developer.chrome.com/apps/storage
 
 HTML CSS JS JQuery
 
