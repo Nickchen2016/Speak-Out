@@ -27,13 +27,11 @@ body {
     background: black;
     margin-left:-8px;
     opacity: 0.9;
-    /* transform:translateY(0); */
-    transition: all 200ms linear;
+    transition: all 400ms ease-in-out;
 }
 #offpage.active {
     opacity: 0;
     z-index: -1;
-    /* transform: translateY(-100%); */
 } 
 
 #surf {
@@ -43,7 +41,7 @@ body {
     font-size:30px;
 }
 #title {
-    margin-top: -5%;
+    margin-top: -4%;
     margin-left: 24%;
     text-align:center;
     font-size:16px;
