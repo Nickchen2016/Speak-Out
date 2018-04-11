@@ -5,6 +5,13 @@ var onOff = document.querySelector('#onOff');
 var changed = document.getElementById('onOff');
 var distance = 0;
 
+document.getElementById('onOff').addEventListener('mouseover',()=>{
+  document.getElementById('info').style.opacity = 1;
+})
+document.getElementById('onOff').addEventListener('mouseleave',()=>{
+  document.getElementById('info').style.opacity = 0;
+})
+
 chrome.storage.sync.get('value',(data)=>{    
 
   if(data.value==='0.4'){
@@ -32,13 +39,13 @@ chrome.storage.sync.get('value',(data)=>{
 })
 chrome.storage.sync.get('onOff',(data)=>{
   if(data.onOff==='1'){
+    document.getElementById('offpage').style.display = 'none';
     document.getElementById('on').classList.add('active');
     document.getElementById('off').classList.remove('active');
-    document.getElementById('offpage').classList.add('active');
   }else{
     document.getElementById('off').classList.add('active');
     document.getElementById('on').classList.remove('active');
-    document.getElementById('offpage').classList.remove('active')
+    document.getElementById('offpage').style.display = '';
   }
   changed.value = data.onOff;
 })
