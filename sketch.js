@@ -34,9 +34,11 @@ chrome.storage.sync.get('onOff',(data)=>{
   if(data.onOff==='1'){
     document.getElementById('on').classList.add('active');
     document.getElementById('off').classList.remove('active');
+    document.getElementById('offpage').classList.add('active');
   }else{
     document.getElementById('off').classList.add('active');
     document.getElementById('on').classList.remove('active');
+    document.getElementById('offpage').classList.remove('active')
   }
   changed.value = data.onOff;
 })
@@ -68,9 +70,11 @@ onOff.onchange = function(){
   if(onOff.value==='1'){
     document.getElementById('on').classList.add('active');
     document.getElementById('off').classList.remove('active');
+    document.getElementById('offpage').classList.add('active');
   }else{
     document.getElementById('off').classList.add('active');
     document.getElementById('on').classList.remove('active');
+    document.getElementById('offpage').classList.remove('active');
   }
   chrome.storage.sync.set({'onOff':onOff.value},()=>console.log('onOff: '+onOff.value+'saved'));
 
