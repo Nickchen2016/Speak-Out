@@ -75,10 +75,12 @@ document.getElementById('male').addEventListener('click',()=>{
 
 onOff.onchange = function(){
   if(onOff.value==='1'){
+    document.getElementById('offpage').style.display = '';
     document.getElementById('on').classList.add('active');
     document.getElementById('off').classList.remove('active');
     document.getElementById('offpage').classList.add('active');
   }else{
+    document.getElementById('offpage').style.display = '';
     document.getElementById('off').classList.add('active');
     document.getElementById('on').classList.remove('active');
     document.getElementById('offpage').classList.remove('active');
