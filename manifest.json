@@ -3,6 +3,7 @@
     "manifest_version":2,
     "name": "Speak-Out",
     "version": "1.0",
+    "description": "Speak-Out is a small tool to help English learner or slow reader to have a better internet 🏄‍♀️🏄 experience😉!",
     "content_scripts":[
        {    "matches":["<all_urls>"],
             "css": ["font.css"],
