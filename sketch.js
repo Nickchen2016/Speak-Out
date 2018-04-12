@@ -75,6 +75,7 @@ document.getElementById('male').addEventListener('click',()=>{
 
 onOff.onchange = function(){
   if(onOff.value==='1'){
+    document.getElementById('offpage').style.display = '';
     document.getElementById('on').classList.add('active');
     document.getElementById('off').classList.remove('active');
     document.getElementById('offpage').classList.add('active');
@@ -83,6 +84,7 @@ onOff.onchange = function(){
     document.getElementById('off').classList.add('active');
     document.getElementById('on').classList.remove('active');
     document.getElementById('offpage').classList.remove('active');
+    document.getElementById('wordsdefine').classList.remove('active');
   }
   chrome.storage.sync.set({'onOff':onOff.value},()=>console.log('onOff: '+onOff.value+'saved'));
 
