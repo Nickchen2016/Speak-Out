@@ -114,11 +114,11 @@ rate.onchange = function(){
   chrome.storage.sync.set({'value': rate.value}, ()=>console.log('Setting saved'));
 }
 
-chrome.storage.sync.get('allWords',(data)=>{  
+chrome.storage.sync.get('allWords',(da)=>{  
 
-  console.log(data.allWords);
+  console.log('=============',da);
 
-  data.allWords.reverse().forEach((el)=>{
+  da.allWords.reverse().forEach((el)=>{
 //Dynamic innerHTML for #app
       document.getElementById('app').innerHTML += '<div class="slide" style="cursor:pointer;width:315px;height:100%;margin-top:0px;"><p style="margin-top:18px;">'+el[0][0].toUpperCase()+el[0].slice(1)+'</p></div>';
 
@@ -131,7 +131,7 @@ chrome.storage.sync.get('allWords',(data)=>{
   Array.from(className).forEach((element)=>{
     element.addEventListener('click',()=>{
       // console.log('element here', element.textContent);
-     data.allWords.forEach((el)=>{
+     da.allWords.forEach((el)=>{
       if(element.textContent.toLowerCase()===el[0] && el[1]!='undefined'){
         document.getElementById('definition').innerHTML = '<div style="display:flex;"><div style="background:red;width:2.5%;height:36px;margin-top:35px;"></div><div style="width:95%;height:30px;font-family:futura_bold;font-size:33px;margin-top:36px;margin-left:20px;">'+el[0][0].toUpperCase()+el[0].slice(1)+':</div></div><div style="width:85%;height:30px;margin-top:10px;margin-left:28px;margin-bottom:15%;">'+el[1]+'</div>';
         document.getElementById('wordsdefine').classList.add('active');
@@ -146,7 +146,7 @@ chrome.storage.sync.get('allWords',(data)=>{
   })
 
 //slideshow built here
-  var n = data.allWords.length-1;
+  var n = da.allWords.length-1;
   document.getElementById('right').addEventListener('click',()=>{
     if(distance>-(n*100) && distance<=0){
       distance-=100;

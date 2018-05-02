@@ -8,7 +8,6 @@ var synth = window.speechSynthesis;
 //Caculate the scrolling distance.
 function scrolled(){
     var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : document.body.scrollTop;
-    // console.log(scrollTop);
     return scrollTop;
 }
 
@@ -66,21 +65,34 @@ function wordSelected(){
 
 //Save Searched words data into chrome storage for future usage 
             chrome.storage.sync.get(('allWords'),(da)=>{
+                console.log('--------------',da.allWords)
                 if(da.allWords.length===20){
                     da.allWords.shift();
                     da.allWords.push([`${selectedText}`,`${data.data.definition}`]);
                     chrome.storage.sync.set({'allWords' : da.allWords},()=>{console.log('shift the 1st, push in new word')});
-                }else{
+                }else if(da.allWords!='undefined'){
                     da.allWords.push([`${selectedText}`,`${data.data.definition}`]);
                     chrome.storage.sync.set({'allWords' : da.allWords},()=>{console.log('definition has been saved')});
+                }else{
+                    allWords.push([`${selectedText}`,`${data.data.definition}`]);
+                    chrome.storage.sync.set({'allWords' : allWords},()=>{console.log('definition has been saved')});
                 }
-            })    
+            }) 
+            // allWords.push([`${selectedText}`,`${data.data.definition}`])
+            // chrome.storage.sync.set({'allWords' : allWords},()=>{console.log('definition has been saved')});
+            // chrome.storage.sync.get(('allWords'),(da)=>{
+            //     console.log('+++++++++',da.allWords)
+            //     if(da.allWords.length>=6){
+            //         da.allWords.shift();
+            //         chrome.storage.sync.remove('allWords',()=>{console.log('good')})
+            //         chrome.storage.sync.set({'allWords' : da.allWords},()=>{console.log('first word has been removed')});
+            //     }
+            // }) 
         });
 
 
 
         document.body.prepend(side);
-        // side.style.display = 'inline-block';
         side.style.verticalAlign = 'middle';
         side.style.maxHeight = '160px';
         side.style.maxWidth = '400px';
