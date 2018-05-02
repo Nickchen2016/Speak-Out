@@ -65,7 +65,6 @@ function wordSelected(){
 
 //Save Searched words data into chrome storage for future usage 
             chrome.storage.sync.get(('allWords'),(da)=>{
-                console.log('--------------',da.allWords)
                 if(da.allWords.length===20){
                     da.allWords.shift();
                     da.allWords.push([`${selectedText}`,`${data.data.definition}`]);
@@ -75,19 +74,9 @@ function wordSelected(){
                     chrome.storage.sync.set({'allWords' : da.allWords},()=>{console.log('definition has been saved')});
                 }else{
                     allWords.push([`${selectedText}`,`${data.data.definition}`]);
-                    chrome.storage.sync.set({'allWords' : allWords},()=>{console.log('definition has been saved')});
+                    chrome.storage.sync.set({'allWords' : allWords},()=>{console.log('First word has been saved')});
                 }
-            }) 
-            // allWords.push([`${selectedText}`,`${data.data.definition}`])
-            // chrome.storage.sync.set({'allWords' : allWords},()=>{console.log('definition has been saved')});
-            // chrome.storage.sync.get(('allWords'),(da)=>{
-            //     console.log('+++++++++',da.allWords)
-            //     if(da.allWords.length>=6){
-            //         da.allWords.shift();
-            //         chrome.storage.sync.remove('allWords',()=>{console.log('good')})
-            //         chrome.storage.sync.set({'allWords' : da.allWords},()=>{console.log('first word has been removed')});
-            //     }
-            // }) 
+            })  
         });
 
 
