@@ -116,8 +116,6 @@ rate.onchange = function(){
 
 chrome.storage.sync.get('allWords',(da)=>{  
 
-  console.log('=============',da);
-
   da.allWords.reverse().forEach((el)=>{
 //Dynamic innerHTML for #app
       document.getElementById('app').innerHTML += '<div class="slide" style="cursor:pointer;width:315px;height:100%;margin-top:0px;"><p style="margin-top:18px;">'+el[0][0].toUpperCase()+el[0].slice(1)+'</p></div>';
