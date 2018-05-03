@@ -163,6 +163,5 @@ chrome.storage.sync.get('allWords',(da)=>{
 })
 
 document.getElementById('triangle').addEventListener('click', ()=>{
-  // document.getElementById('definition').innerHTML = '';
   document.getElementById('wordsdefine').classList.remove('active');
 })
