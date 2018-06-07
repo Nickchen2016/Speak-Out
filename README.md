@@ -23,7 +23,7 @@ In Chrome Broswer--Window--Extensions--Load Unpacked--locate the download file--
 
 ## App Screen Shoot 
 
-![](image/1111.png)
+<img src='image/1111.png' width='50%'/>
 
 
 ## Used Tech
