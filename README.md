@@ -21,6 +21,10 @@ No npm install require, if you want to check the code. Just download it & go to 
 
 In Chrome Broswer--Window--Extensions--Load Unpacked--locate the download file--Select--Enjoy!🍻
 
+## App Screen Shoot 
+
+![](image/filename%201111png)
+
 
 ## Used Tech
 
