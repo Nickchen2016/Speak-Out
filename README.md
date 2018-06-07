@@ -23,7 +23,7 @@ In Chrome Broswer--Window--Extensions--Load Unpacked--locate the download file--
 
 ## App Screen Shoot 
 
-![](public/image/1111.png)
+![](image/1111.png)
 
 
 ## Used Tech
