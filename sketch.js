@@ -5,11 +5,14 @@ var onOff = document.querySelector('#onOff');
 var changed = document.getElementById('onOff');
 var distance = 0;
 
-document.getElementById('onOff').addEventListener('mouseover',()=>{
-  document.getElementById('info').style.opacity = 1;
-})
-document.getElementById('onOff').addEventListener('mouseleave',()=>{
-  document.getElementById('info').style.opacity = 0;
+
+document.getElementById('locker').addEventListener('click', ()=>{
+    document.getElementById('offpage').style.display = '';
+    document.getElementById('on').classList.add('active');
+    document.getElementById('off').classList.remove('active');
+    document.getElementById('offpage').classList.add('active');
+    changed.value = '1';
+    chrome.storage.sync.set({'onOff':'1'},()=>console.log('onOff: '+onOff.value+'saved'));
 })
 
 chrome.storage.sync.get('value',(data)=>{    

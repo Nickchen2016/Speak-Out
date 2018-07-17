@@ -25,40 +25,52 @@ body {
     z-index:2;
     height:100%;
     width:100%;
-    background: black;
+    background: white;
     margin-left:-8px;
-    opacity: 0.9;
+    opacity: 1;
     transition: all 600ms ease-in-out;
+    align-content: center;
 }
 #offpage.active {
     opacity: 0;
     z-index:-1;
 } 
 
-#surf {
+#branding {
     text-align:center;
-    font-size:33px;
-    transform:scale(-1,1);
 }
 
 #info {
-    margin-top:41%;
-    margin-left:35%;
-    opacity: 0;
+    margin-top:22%;
 }
 
 
-#title {
-    margin-top: -10%;
-    text-align:center;
-    font-size:16px;
-    color: white;
+#locker {
+    width: 40px;
+    height: 52px;
+    margin-top: 20%; margin-left: 45%;
+    text-align: center;
+    background: url('/image/lock.png') no-repeat; 
+    cursor: pointer;
+}
+
+#locker:hover {
+    background: url('/image/unlock.png') no-repeat;
+}
+
+#locker:hover:after {
+    content: 'Unlock Features';
+    position: absolute;
+    white-space: nowrap;
+    margin: 48px 0 0 -60px;
+    font-size: 15px;
     font-family:'futura_italic';
+
 }
 
 #begin {
     position: absolute;
-    z-index:2;
+    /* z-index:2; */
     margin-left:18%;
     margin-top: -2%;
 }
