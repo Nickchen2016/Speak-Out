@@ -1,6 +1,6 @@
 # Speak-Out
 
-https://youtu.be/y24Rw-SWyMI
+https://www.youtube.com/watch?v=y24Rw-SWyMI
 
 ** Version 1.0 **
 
