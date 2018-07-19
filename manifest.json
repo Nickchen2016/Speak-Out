@@ -2,7 +2,7 @@
 {
     "manifest_version":2,
     "name": "Speak-Out",
-    "version": "1.0",
+    "version": "1.1.0",
     "description": "Speak-Out is a small Text to Speech tool to bring you a better internet 🏄‍♀️🏄🏼 experience😉!",
     "content_scripts":[
        {    "matches":["<all_urls>"],
