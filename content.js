@@ -23,17 +23,18 @@ function wordSelected(){
         chrome.storage.sync.get('gender',(data)=>{
             if(data.gender==='0'){
                 utterThis.voice = voices[0];
-            }else{
+            }else if(data.gender==='48'){
                 utterThis.voice = voices[48];
+            }else{
+                utterThis.voice = voices[0];
             }
         })
 
         chrome.storage.sync.get('onOff',(data)=>{
             if(data.onOff==='1'){
                 chrome.storage.sync.get('value',(data)=>{
-        
-                    utterThis.rate = data.value;
-                    synth.speak(utterThis);
+                  if(data.value) utterThis.rate = data.value;
+                  synth.speak(utterThis);
                 })
             }
         })
@@ -65,11 +66,12 @@ function wordSelected(){
 
 //Save Searched words data into chrome storage for future usage 
             chrome.storage.sync.get(('allWords'),(da)=>{
-                if(da.allWords.length===20){
+
+                if(da.allWords&&da.allWords.length===20){
                     da.allWords.shift();
                     da.allWords.push([`${selectedText}`,`${data.data.definition}`]);
                     chrome.storage.sync.set({'allWords' : da.allWords},()=>{console.log('shift the 1st, push in new word')});
-                }else if(da.allWords!='undefined'){
+                }else if(da.allWords&&da.allWords.length>0){
                     da.allWords.push([`${selectedText}`,`${data.data.definition}`]);
                     chrome.storage.sync.set({'allWords' : da.allWords},()=>{console.log('definition has been saved')});
                 }else{

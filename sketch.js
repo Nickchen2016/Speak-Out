@@ -67,13 +67,13 @@ chrome.storage.sync.get('gender',(data)=>{
 document.getElementById('female').addEventListener('click',()=>{
   document.getElementById('female').classList.add('active');
   document.getElementById('male').classList.remove('active');
-  console.log(document.getElementById('female').getAttribute('value'))
-  chrome.storage.sync.set({'gender':document.getElementById('female').getAttribute('value')},()=>console.log('female voice been sent!'));
+  // console.log(document.getElementById('female').getAttribute('value'))
+  chrome.storage.sync.set({'gender':'48'},()=>console.log('female voice been sent!'));
 })
 document.getElementById('male').addEventListener('click',()=>{
   document.getElementById('male').classList.add('active');
   document.getElementById('female').classList.remove('active');
-  chrome.storage.sync.set({'gender':document.getElementById('male').getAttribute('value')},()=>console.log('male voice been sent!'));
+  chrome.storage.sync.set({'gender':'0'},()=>console.log('male voice been sent!'));
 })
 
 onOff.onchange = function(){
@@ -119,7 +119,7 @@ rate.onchange = function(){
 
 chrome.storage.sync.get('allWords',(da)=>{  
 
-  da.allWords.reverse().forEach((el)=>{
+  da.allWords&&da.allWords.reverse().forEach((el)=>{
 //Dynamic innerHTML for #app
       document.getElementById('app').innerHTML += '<div class="slide" style="cursor:pointer;width:315px;height:100%;margin-top:0px;"><p style="margin-top:18px;">'+el[0][0].toUpperCase()+el[0].slice(1)+'</p></div>';
 
@@ -147,7 +147,7 @@ chrome.storage.sync.get('allWords',(da)=>{
   })
 
 //slideshow built here
-  var n = da.allWords.length-1;
+  var n = da.allWords&&da.allWords.length-1;
   document.getElementById('right').addEventListener('click',()=>{
     if(distance>-(n*100) && distance<=0){
       distance-=100;
