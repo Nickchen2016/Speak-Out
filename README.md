@@ -19,7 +19,9 @@ Speak-Out is a small tool that fixs those questions above & helps you to have a 
 
 Since it is a Chrome Extension. I need you to have a Google Chrome 1st.
 
-No npm install require, if you want to check the code. Just download it & go to your Chrome Broswer.
+Your can install this extension in Chrome store here: https://chrome.google.com/webstore/detail/speak-out/pncollhcmilogpggdbibckiolebhnafl?hl=en
+
+If you want to check the code, there is no npm install required. Just download it & go to your Chrome Broswer.
 
 In Chrome Broswer--Window--Extensions--Load Unpacked--locate the download file--Select--Enjoy!🍻
 
@@ -28,7 +30,7 @@ In Chrome Broswer--Window--Extensions--Load Unpacked--locate the download file--
 <img src='image/1111.png' width='50%'/>
 
 
-## Used Tech
+## Useful Tech
 
 - Speech Synthesis https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis
 
