@@ -6,8 +6,8 @@
 
 ## A Brief Introduction about Speak-Out (Watch Here👀!!)
 
-<object data="https://www.youtube.com/embed/y24Rw-SWyMI"
-   width="560" height="315"></object>
+<video src="https://www.youtube.com/embed/y24Rw-SWyMI"
+   width="560" height="315" />
 
 
 ## Why?
