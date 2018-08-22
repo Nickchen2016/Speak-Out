@@ -5,7 +5,9 @@
 
 
 ## A Brief Introduction about Speak-Out (Watch Here👀!!)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y24Rw-SWyMI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<object data="https://www.youtube.com/embed/y24Rw-SWyMI"
+   width="560" height="315"></object>
 
 
 ## Why?
