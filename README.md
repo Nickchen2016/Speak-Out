@@ -9,6 +9,11 @@
 https://www.youtube.com/embed/y24Rw-SWyMI
 
 
+## App Screen Shoot 
+
+<img src='image/1111.png'/>
+
+
 ## Why?
 
 - Did you ever feel that you can absorb more information by listening someone's speaking than read by yourself?
@@ -29,10 +34,6 @@ Your can install this extension in Chrome store here: https://chrome.google.com/
 If you want to check the code, there is no npm install required. Just download it & go to your Chrome Broswer.
 
 In Chrome Broswer--Window--Extensions--Load Unpacked--locate the download file--Select--Enjoy!🍻
-
-## App Screen Shoot 
-
-<img src='image/1111.png'/>
 
 
 ## Useful Tech
