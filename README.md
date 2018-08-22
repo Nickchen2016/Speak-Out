@@ -6,7 +6,7 @@
 
 ## A Brief Introduction about Speak-Out (Watch Here👀!!)
 
-<div><iframe width="560" height="315" src="https://www.youtube.com/embed/y24Rw-SWyMI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+https://www.youtube.com/embed/y24Rw-SWyMI
 
 
 ## Why?
