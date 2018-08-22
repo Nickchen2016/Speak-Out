@@ -32,7 +32,7 @@ In Chrome Broswer--Window--Extensions--Load Unpacked--locate the download file--
 
 ## App Screen Shoot 
 
-<img src='image/1111.png' width='50%'/>
+<img src='image/1111.png'/>
 
 
 ## Useful Tech
