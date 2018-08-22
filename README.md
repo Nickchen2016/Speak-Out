@@ -1,6 +1,4 @@
-# <img src='image/logo2.png' />
-
-** Version 1.1.0 **
+# <img src='image/logo2.png' />   ** Version 1.1.0 **
 
 
 
