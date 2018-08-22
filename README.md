@@ -1,4 +1,4 @@
-# Speak-Out
+# <img src='image/logo2.png' />
 
 ** Version 1.1.0 **
 
