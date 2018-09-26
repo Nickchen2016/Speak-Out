@@ -4,10 +4,12 @@
 
 ## A brief introduction video about Speak-Out (Watch Below👀!!)
 
-https://www.youtube.com/embed/y24Rw-SWyMI
+<a href='https://www.youtube.com/embed/y24Rw-SWyMI'>
+  <img src='image/1.png'/>
+</a>
 
 
-## App Screen Shoot 
+## App Sample 
 
 <img src='image/1111.png'/>
 
