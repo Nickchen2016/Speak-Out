@@ -4,7 +4,7 @@
 
 ## A brief introduction video about Speak-Out (Watch Below👀!!)
 
-<a href='https://www.youtube.com/embed/y24Rw-SWyMI'>
+<a href='https://www.youtube.com/watch?v=y24Rw-SWyMI' target='_blank'>
   <img src='image/1.png'/>
 </a>
 
