@@ -1,8 +1,18 @@
-# Speak-Out
-
-https://www.youtube.com/watch?v=y24Rw-SWyMI
-
+# <img src='image/logo2.png' />
 ** Version 1.1.0 **
+
+
+## A brief introduction video about Speak-Out (Watch Below👀!!)
+
+<a href='https://www.youtube.com/watch?v=y24Rw-SWyMI' target='_blank'>
+  <img src='image/1.png'/>
+</a>
+
+
+## App Sample 
+
+<img src='image/1111.png'/>
+
 
 ## Why?
 
@@ -19,16 +29,14 @@ Speak-Out is a small tool that fixs those questions above & helps you to have a 
 
 Since it is a Chrome Extension. I need you to have a Google Chrome 1st.
 
-No npm install require, if you want to check the code. Just download it & go to your Chrome Broswer.
+Your can install this extension in Chrome store here: https://chrome.google.com/webstore/detail/speak-out/pncollhcmilogpggdbibckiolebhnafl?hl=en
+
+If you want to check the code, there is no npm install required. Just download it & go to your Chrome Broswer.
 
 In Chrome Broswer--Window--Extensions--Load Unpacked--locate the download file--Select--Enjoy!🍻
 
-## App Screen Shoot 
 
-<img src='image/1111.png' width='50%'/>
-
-
-## Used Tech
+## Useful Tech
 
 - Speech Synthesis https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis
 
@@ -36,7 +44,7 @@ In Chrome Broswer--Window--Extensions--Load Unpacked--locate the download file--
 
 - Google Chrome Storage https://developer.chrome.com/apps/storage
 
-- HTML CSS JS JQuery
+- HTML, CSS, JS, JQuery
 
 
 
