@@ -2,14 +2,17 @@
 {
     "manifest_version":2,
     "name": "Speak-Out",
-    "version": "1.1.0",
+    "version": "2.0",
     "description": "Speak-Out is a small Text to Speech tool to bring you a better internet 🏄‍♀️🏄🏼 experience😉!",
     "content_scripts":[
        {    "matches":["<all_urls>"],
             "css": ["font.css"],
-           "js": ["jquery-3.3.1.min.js","content.js"]
+           "js": ["content.js"]
         }
     ],
+    "background":{
+        "scripts":["background.js"]
+    },
     "permissions": ["storage"],
     "web_accessible_resources": ["font/futura_bold.otf"],
     "browser_action":{ 

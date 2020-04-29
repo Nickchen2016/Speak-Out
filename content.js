@@ -1,6 +1,4 @@
 
-console.log('extension go here?!')
-
 var allWords = [];
 var voices = [];
 var synth = window.speechSynthesis;
@@ -14,7 +12,7 @@ function scrolled(){
 
 window.addEventListener('mouseup', wordSelected);
 function wordSelected(){
-    var selectedText = window.getSelection().toString().toLowerCase();
+    var selectedText = window.getSelection().rangeCount>=1?window.getSelection().toString().toLowerCase():'';
     voices = synth.getVoices();
 //Speech Synthesis setup here.
     if(selectedText.length>0){
@@ -38,8 +36,6 @@ function wordSelected(){
                 })
             }
         })
-        
-        console.log(selectedText)
     }
 
 
@@ -50,8 +46,8 @@ function wordSelected(){
 
         var side = document.createElement('div');
         side.className = 'toolTip';
-        $.getJSON(`https://api.shanbay.com/bdc/search/?word=${selectedText}`,function(data){
-            // console.log(data.data.definition);
+
+        chrome.runtime.sendMessage({selectedText: selectedText}, data=>{
 
             if(data.data.definition!=undefined){
                 side.innerHTML = '<div style="display:flex;margin-top:20px;"><div style="width:6px;height:32px;background:red;"></div><div class="wordTitle" style="font-size:26px;margin:2px 20px 0 10px;">'+
