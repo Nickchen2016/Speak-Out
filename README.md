@@ -1,5 +1,5 @@
 # <img src='image/logo2.png' />
-** Version 1.1.0 **
+** Version 2.0 **
 
 
 ## A brief introduction video about Speak-Out (Watch Below👀!!)
